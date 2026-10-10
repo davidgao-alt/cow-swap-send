@@ -1,0 +1,28 @@
+{
+  "name": "cow-swap-send",
+  "version": "1.0.0",
+  "description": "Swap any token for any token on CoW Protocol and deliver the proceeds to another address",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "quote": "tsx --disable-warning=DEP0040 src/cli.ts quote",
+    "swap": "tsx --disable-warning=DEP0040 src/cli.ts swap",
+    "typecheck": "tsc --noEmit",
+    "limit": "tsx --disable-warning=DEP0040 src/cli.ts limit",
+    "twap": "tsx --disable-warning=DEP0040 src/cli.ts twap",
+    "cancel": "tsx --disable-warning=DEP0040 src/cli.ts cancel"
+  },
+  "dependencies": {
+    "@cowprotocol/cow-sdk": "9.2.20",
+    "@cowprotocol/sdk-viem-adapter": "0.3.35",
+    "viem": "2.57.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}
